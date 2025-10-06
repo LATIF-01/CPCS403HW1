@@ -1,9 +1,3 @@
-/* 
-<!--Abdellatif Sadek Zeghib 
-2244531
-CS1
--->
-*/
 /* ===== General Styles ===== */
 body {
   /*  changing background color and  making content take the full screen*/
@@ -311,3 +305,4 @@ form button {
   position: relative;
   top: 35%;
 }
+
