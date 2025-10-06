@@ -88,7 +88,7 @@ a {
 .card {
   /* card div styles */
   display: flex;
-  width: 1155px;
+  width: 65%;
   background-color: white;
   margin: 50px 0px;
   border-radius: 15px;
@@ -312,3 +312,4 @@ form button {
   position: relative;
   top: 35%;
 }
+
