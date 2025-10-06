@@ -92,6 +92,7 @@ a {
   background-color: white;
   margin: 50px 0px;
   border-radius: 15px;
+  overflow: hidden;
 }
 .cardtext {
   /* card text style */
@@ -312,4 +313,5 @@ form button {
   position: relative;
   top: 35%;
 }
+
 
