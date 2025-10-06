@@ -1,0 +1,314 @@
+/* 
+<!--Abdellatif Sadek Zeghib 
+2244531
+CS1
+-->
+*/
+/* ===== General Styles ===== */
+body {
+  /*  changing background color and  making content take the full screen*/
+  margin: 0;
+  background-color: #f0b873;
+}
+a {
+  /* removing the underline from hypertexts */
+  text-decoration: none;
+}
+.p1header {
+  /* header baner */
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 60%,
+      /* gradual color of the backgroung on the baner */ #f0b873 100%
+    ),
+    url("images/testbaner.png"); /* baner background picture */
+  height: 300px; /* baner height */
+  background-size: cover; /* scales image to cover div */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat; /* prevent tiling */
+  justify-content: space-evenly; /* even space between header content */
+  display: flex; /* makes the the inner items in horizantal blocks */
+  position: relative; /* header position mode as relative so content positions change relavtily to it  */
+}
+.p1header h1 {
+  padding-top: 2%;
+  position: absolute; /* the heading will change accoring to the header */
+  top: 45%; /* move down 45% of header height */
+  left: 20%;
+  color: white;
+}
+.hypertexts {
+  /* hypertexts div styles */
+  padding-top: 2%;
+  font-size: larger;
+  font-weight: bolder;
+  position: relative;
+  top: 20%;
+}
+.hypertexts a {
+  /* hypertexts links styles */
+  color: white;
+  padding: 5px 15px; /* increasing links space */
+  border-radius: 15px; /* makes rounded corners */
+}
+.hypertexts a:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* changes links background with mouse pointer into transparent white */
+}
+.hypertexts button {
+  /* login button */
+  font-size: large;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: #0277a2;
+  border: none;
+}
+.hypertexts button:hover {
+  /* button color with mouse pointer */
+  background-color: #028fc4;
+}
+
+.logo {
+  /* company logo style */
+  width: 150px;
+  position: relative;
+  top: 10%;
+}
+/* ===== Landing ===== */
+.p1landing {
+  justify-items: center; /* centers all landing content */
+  align-items: center;  
+}
+.card {
+  /* card div styles */
+  display: flex;
+  width: 65%;
+  background-color: white;
+  margin: 50px 0px;
+  border-radius: 15px;
+}
+.cardtext {
+  /* card text style */
+  width: 500px;
+  margin: 35px;
+}
+.cardtext p {
+  text-align: center;
+}
+/* ===== Footer =====*/
+.p1footer {
+  /* footer style */
+  height: 400px;
+  background: url(images/cot.png) repeat-x top; /* adding image dicorates the top of the footer and making it repeat horizontly*/
+  background-size: 15%;
+  justify-content: space-evenly; /* equial space between footer content */
+  align-items: center;
+  background-color: #bd7114;
+  padding: 1px;
+  position: relative;
+  color: white;
+  display: flex;
+}
+.p1footer a {
+  /* footer hypertexts style */
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-weight: bold;
+}
+.footerlinks a {
+  /* footerlinks div style */
+  padding: 5px 0px;
+  position: relative;
+  top: 40px;
+}
+.p1footer a:hover {
+  /* linkes effect with pointer*/
+  text-decoration: underline;
+}
+.p1footer img {
+  /* footer logo style */
+  width: 200px;
+}
+.social {
+  /*social media links section styles*/
+  justify-items: center;
+}
+.social h2 {
+  /*social media links section headings styles*/
+  position: relative;
+  padding-top: 50%;
+}
+.social a img {
+  /*social media links section image as link styles*/
+  width: 30px;
+  margin: 10px;
+}
+.footerlinks {
+  /*footer links section styles*/
+  display: flex;
+  flex-direction: column;
+  padding-top: 4%;
+}
+/* ===== Packages page ===== */
+.packages-grid {
+  /* packages section styles */
+  display: grid; /*like flex but it place items in a grid*/
+  grid-template-columns: repeat(
+    /*specify the number of columns in the grid and each 1fr means one column*/
+      auto-fit,
+    minmax(300px, 1fr)
+      /*same as 1fr 1fr 1fr 1fr and the column width should be at least 300px or it goes to another row*/
+  ); /*repeat(...) → tells CSS to repeat 1fr many times and 1fr means it will split the space equaly between each 1fr items*/
+  gap: 30px; /*gap between the column*/
+  width: 90%;
+  margin: 50px auto;
+}
+.package-card {
+  /*package cards style*/
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden; /*hides the content the over flow the div space (image corners)*/
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(49, 49, 49, 0.2); /*shadow effect under the card*/
+  transition: transform 0.3s, box-shadow 0.3s; /*makes every transition duration 0.3s so it looks smoth */
+}
+.package-card:hover {
+  transform: translateY(-10px); /*with mouse pointer the cards moves up 10px*/
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /*with mouse pointer the shadow under the card becomes bigger*/
+}
+
+.package-card img {
+  /*cards image style*/
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.package-card h2 {
+  /*cards heading 2 style*/
+  color: #bd7114;
+  margin: 15px 0 10px;
+}
+
+.package-card p {
+  /*cards p style*/
+  padding: 0 15px 15px;
+}
+
+.package-card button {
+  /*cards button style*/
+  border: none;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #0277a2;
+  color: white;
+}
+.package-card button:hover {
+  /*cards button effect with the pointer*/
+  background-color: #028fc4;
+}
+/*====contact page=====*/
+form input,
+form textarea {
+  /*forms input and textarea common style*/
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+form button {
+  /*forms button style*/
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #0277a2;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+}
+
+/* ===== Umrah Page ===== */
+.hero {
+  /* baner under the header*/
+  position: relative;
+  height: 400px;
+  background-size: cover; /*makes background image cover all the div*/
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .herotext {
+  /* baner text style*/
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*balck transpernt div above the baner so it looks darker*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  /*baner heading*/
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 0 20px;
+}
+/*=== FAQs Page ===*/
+.faq-container {
+  /*FAQs block*/
+  width: 50%;
+  margin: 40px;
+}
+
+.faq-item {
+  /*question answers item*/
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.faq-item summary {
+  /* answern section item*/
+  font-size: 18px;
+  font-weight: bold;
+  color: #0277a2;
+}
+
+.faq-item summary:hover {
+  /* answern effect with pointer*/
+  color: #028fc4;
+}
+
+.faq-item p {
+  /* question style*/
+  margin-top: 10px;
+  font-size: 15px;
+  color: black;
+  line-height: 1.6;
+}
+.copyright {
+  /*copyrighted text*/
+  position: relative;
+  top: 35%;
+}
